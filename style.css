@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mukta', sans-serif;
+}
+
+.caixaPrincipal {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 6rem;
+    height: 100vh;
+    width: 100vw;
+    
+}
+/*Div lado esquerdo*/
+
+.caixaPrincipal .sobreNos{
+    width: 50%;
+    color: #fff;
+    font-size: 120%;
+}
+
+.caixaPrincipal .sobreNos .logoMario {
+    width: 100%;
+}
+.caixaPrincipal .botaoEntreEmContato {
+    color: #fff;
+    background-color: #c51111;
+    border-radius: 3px;
+    border: none;
+    width: 40%;
+    padding: 3%;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 30px;
+    font-size: 70%;
+}
+.caixaPrincipal .linkZap img {
+    height: 60px;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+}
+
+/*Div lado direito*/
+.caixaPrincipal .imgMarioLuige{
+    width: 35%;
+}
+
+.caixaPrincipal .caixaVideo {
+    position: fixed;
+    z-index: -1;    
+}
+.caixaPrincipal .caixaVideo video {
+    background-image: cover;
+    height: 100vh;
+    width: 100vw;
+}
+.caixaPrincipal .caixaVideo .mascara{
+    width: 100vw;
+   height: 100vh;
+    background: linear-gradient(109deg, rgba(10,12,16,0.99) 15%, rgba(10, 2, 16, 0.368) 50%, rgba(10,12,16,0.99) 85%);;
+    position: fixed;
+    top: 0;
+}
+
+@media screen and (max-width: 599px) {
+    *{
+        
+        font-size: 83%;
+    }
+    .caixaPrincipal {
+        padding: 2rem;    
+    }
+    .caixaPrincipal .imgMarioLuige{
+       width: 40%;
+    }
+    .caixaPrincipal .botaoEntreEmContato {
+        width: 45%;
+        padding: 4% 2%;
+        margin-top: 5px;
+    }
+    .caixaPrincipal .linkZap img {
+        height: 40px;
+    }
+
+}
+@media screen and (min-width: 600px )and (max-width: 1023px) {
+    *{
+        
+        font-size: 95%;
+    }
+    .caixaPrincipal {
+        padding: 2rem;    
+    }
+    .caixaPrincipal .sobreNos .logoMario {
+        width: 85%;
+    }
+    .caixaPrincipal .imgMarioLuige{
+       width: 30%;
+    }
+    .caixaPrincipal .botaoEntreEmContato {
+        width: 35%;
+        padding: 3% 2%;
+        margin-top: 10px;
+    }
+    .caixaPrincipal .linkZap img {
+        height: 40px;
+    }
+
+}
