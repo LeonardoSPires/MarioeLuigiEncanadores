@@ -4,12 +4,40 @@
     box-sizing: border-box;
     font-family: 'Mukta', sans-serif;
 }
+/*
+.mascaraFormulario{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(109deg, rgba(10,12,16,0.99) 15%, rgba(10, 2, 16, 0.77) 50%, rgba(10,12,16,0.99) 85%);
+}
+*/
+header {
+    display: flex;
+    align-items: center;
+    padding: 3%;
+
+}
+header a {
+    text-decoration: none;
+    color: #fff;
+    padding-left: 3%;
+}
+header a:hover {
+    color: #c51111;
+    font-size: 110%;
+    transition: .5s ease-in-out;
+}
+header img {
+    width: 5%;
+}
 
 .caixaPrincipal {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 6rem;
+    padding: 0 6rem;
     height: 100vh;
     width: 100vw;
     
@@ -38,11 +66,15 @@
     margin-top: 30px;
     font-size: 70%;
 }
-.caixaPrincipal .linkZap img {
+.caixaPrincipal .botaoEntreEmContato:hover {
+    color: #c51111;
+    background-color: #fff;
+}
+.linkZap img {
     height: 60px;
     position: fixed;
-    right: 50px;
-    bottom: 50px;
+    right: 2%;
+    bottom: 2%;
 }
 
 /*Div lado direito*/
@@ -52,22 +84,62 @@
 
 .caixaPrincipal .caixaVideo {
     position: fixed;
-    z-index: -1;    
+    top: 0;
+    z-index: -1;   
+    width: 100%;
+    height: 100%;
+    overflow: hidden; 
 }
 .caixaPrincipal .caixaVideo video {
-    background-image: cover;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 .caixaPrincipal .caixaVideo .mascara{
     width: 100vw;
-   height: 100vh;
-    background: linear-gradient(109deg, rgba(10,12,16,0.99) 15%, rgba(10, 2, 16, 0.368) 50%, rgba(10,12,16,0.99) 85%);;
+    height: 100vh;
+    background: linear-gradient(109deg, rgba(10,12,16,0.99) 15%, rgba(10, 2, 16, 0.368) 50%, rgba(10,12,16,0.99) 85%);
     position: fixed;
     top: 0;
 }
 
-@media screen and (max-width: 599px) {
+.FormularioFaleConosco {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 20%;
+    height: 35%;
+    position: fixed;
+    top: 10%;
+    left: -20%;
+    padding: 1%;
+    border-radius: 5%;
+}
+.FormularioFaleConosco input {
+    border: 1px solid gray;
+    background-color: #fff;
+    padding: 2%;
+    width: 100%;
+    font-size: 90%;
+}
+.FormularioFaleConosco button {
+    background-color: #c51111;
+    color: #fff;
+    width: 50%;
+    padding: 2%;
+    margin-top: 5%;
+    font-size: 90%;
+}
+.FormularioFaleConosco textarea{
+    width: 100%;
+    height: 50%;
+    padding: 2%;
+    border: 1px solid gray;
+    font-size: 90%;
+}
+@media screen and (max-width: 450px) {
     *{
         
         font-size: 83%;
@@ -83,15 +155,26 @@
         padding: 4% 2%;
         margin-top: 5px;
     }
-    .caixaPrincipal .linkZap img {
+    .linkZap img {
         height: 40px;
+    }
+    .FormularioFaleConosco {
+        width: 35%;
+        height: 20%;      
+    }
+    .FormularioFaleConosco button {
+        background-color: #c51111;
+        color: #fff;
+        width: 60%;
+        padding: 2%;
+        font-size: 90%;
     }
 
 }
-@media screen and (min-width: 600px )and (max-width: 1023px) {
+@media screen and (min-width: 451px )and (max-width: 1023px) {
     *{
         
-        font-size: 95%;
+        font-size: 85%;
     }
     .caixaPrincipal {
         padding: 2rem;    
@@ -107,8 +190,20 @@
         padding: 3% 2%;
         margin-top: 10px;
     }
-    .caixaPrincipal .linkZap img {
-        height: 40px;
+    .linkZap img {
+        height: 30px;
     }
-
+    
+    .FormularioFaleConosco {
+        width: 35%;
+        height: 30%;      
+    }
+    .FormularioFaleConosco button {
+        background-color: #c51111;
+        color: #fff;
+        width: 60%;
+        padding: 2%;
+        font-size: 90%;
+    }
+    
 }
