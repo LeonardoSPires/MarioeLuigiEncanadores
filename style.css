@@ -20,7 +20,7 @@ header {
     display: flex;
     align-items: center;
     position: fixed;
-    padding: 3%;
+    padding: 2%;
     width: 100% ;
 }
 header a {
@@ -55,14 +55,19 @@ header a img {
 /*Div lado esquerdo*/
 
 .container .sobreNos{
-    width: 50%;
+    width: 40%;
     color: #fff;
     font-size: 120%;
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 .container .sobreNos p {
     color: #fff;
     font-size: 1.3rem;
     text-align: justify;
+    padding-top: 1rem;
 }
 
 .container .sobreNos .logoMario {
@@ -117,20 +122,28 @@ header a img {
     position: fixed;
     top: 0;
 }
-
-.container .marioNS {
-    width: 18rem;
-    padding: 3rem;
+/*Nossos serviços*/
+#nossosServicos .marioNS, .luigiNS, .txtNS{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.container .luigiNS {
-    width: 18rem;
-    padding: 3rem;
+#nossosServicos .marioNS img {
+    width: 13rem;
+    padding: 2rem;
+}
+#nossosServicos .luigiNS img {
+    width: 13rem;
+    padding: 2rem;
     text-align: justify;
 }
-.nossosServicos .container p {
+#nossosServicos p {
+    width: 90%;
     color: #fff;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     text-align: justify;
+    padding: 2rem;
 }
 
 .formularioFaleConosco {
@@ -173,37 +186,50 @@ header a img {
 }
 @media screen and (max-width: 450px) {
     * {
-        font-size: .7rem;
+        font-size: .8rem;
     }
     .container {
         flex-direction: column;
         justify-content: space-evenly;
         padding: 2rem;    
     }
-    .container .sobreNos {
-        width: 65%;
+    .container .sobreNos{
+        width: 85%;
+
+    }
+    .container .sobreNos p {
+        width: 110%;
         color: #fff;
-        font-size: 80%;
+        font-size: .9rem;
         text-align: justify;
     }
  
     .container .imgMarioLuige{
        width: 60%;
+       text-align: start;
     }
     .container .botaoEntreEmContato {
-        width: 45%;
+        width: 35%;
         padding: 4% 2%;
     }
-    .nossosServicos .container p {
-        font-size: 1rem;
-        text-align: justify;
+    #nossosServicos .marioNS, .luigiNS, .txtNS{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-    .container .marioNS {
-        width: 10rem;
+    #nossosServicos .marioNS img {
+        width: 7rem;
         padding: 1rem;
     }
-    .container .luigiNS {
-        width: 10rem;
+    #nossosServicos .luigiNS img {
+        width: 7rem;
+        padding: 1rem;
+    }
+    #nossosServicos p {
+        color: #fff;
+        font-size: 1rem;
+        text-align: justify;
         padding: 1rem;
     }
     .linkZap img {
@@ -219,27 +245,49 @@ header a img {
 
 }
 @media screen and (min-width: 451px )and (max-width: 1023px) {
-    *{
-        
-        font-size: 100%;
+    * {
+        font-size: .8rem;
     }
     .container {
+        justify-content: space-evenly;
         padding: 2rem;    
     }
-    .container .sobreNos .logoMario {
-        width: 85%;
+    .container .sobreNos p {
+        font-size: .8rem;
     }
+    .container .sobreNos {
+        width: 40%;
+        color: #fff;
+        font-size: 80%;
+        text-align: justify;
+    }
+ 
     .container .imgMarioLuige{
        width: 30%;
     }
     .container .botaoEntreEmContato {
-        width: 35%;
-        padding: 3% 2%;
-        margin-top: 10px;
+        width: 45%;
+        padding: 4% 2%;
+        font-size: .6rem;
     }
     
+    #nossosServicos .marioNS img {
+        width: 8rem;
+        padding: 1rem;
+    }
+    #nossosServicos .luigiNS img {
+        width: 8rem;
+        padding: 1rem;
+    }
+    #nossosServicos p {
+        width: 32rem;
+        color: #fff;
+        font-size: .8rem;
+        text-align: justify;
+        padding: 1.1rem;
+    }
     .linkZap img {
-        height: 30px;
+        height: 40px;
     }
     .FormularioFaleConosco button {
         background-color: #c51111;
