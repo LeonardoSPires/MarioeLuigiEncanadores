@@ -59,6 +59,11 @@ header a img {
     color: #fff;
     font-size: 120%;
 }
+.container .sobreNos p {
+    color: #fff;
+    font-size: 1.3rem;
+    text-align: justify;
+}
 
 .container .sobreNos .logoMario {
     width: 100%;
