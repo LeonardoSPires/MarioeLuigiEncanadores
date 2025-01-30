@@ -4,36 +4,46 @@
     box-sizing: border-box;
     font-family: 'Mukta', sans-serif;
 }
-/*
+html {
+    scroll-behavior: smooth;
+  }
 .mascaraFormulario{
+    visibility: hidden;
     position: fixed;
     top: 0;
     width: 100vw;
     height: 100vh;
     background: linear-gradient(109deg, rgba(10,12,16,0.99) 15%, rgba(10, 2, 16, 0.77) 50%, rgba(10,12,16,0.99) 85%);
 }
-*/
+
 header {
     display: flex;
     align-items: center;
+    position: fixed;
     padding: 3%;
-
+    width: 100% ;
 }
 header a {
+    display: flex;
+    justify-content: center;
     text-decoration: none;
+    width: 15%;
     color: #fff;
-    padding-left: 3%;
 }
 header a:hover {
     color: #c51111;
     font-size: 110%;
     transition: .5s ease-in-out;
 }
-header img {
-    width: 5%;
+header a img {
+    height: 4rem;
+}
+.logoHeader {
+    width: max-content;
 }
 
-.caixaPrincipal {
+
+.container {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -44,16 +54,16 @@ header img {
 }
 /*Div lado esquerdo*/
 
-.caixaPrincipal .sobreNos{
+.container .sobreNos{
     width: 50%;
     color: #fff;
     font-size: 120%;
 }
 
-.caixaPrincipal .sobreNos .logoMario {
+.container .sobreNos .logoMario {
     width: 100%;
 }
-.caixaPrincipal .botaoEntreEmContato {
+.container .botaoEntreEmContato {
     color: #fff;
     background-color: #c51111;
     border-radius: 3px;
@@ -66,7 +76,7 @@ header img {
     margin-top: 30px;
     font-size: 70%;
 }
-.caixaPrincipal .botaoEntreEmContato:hover {
+.container .botaoEntreEmContato:hover {
     color: #c51111;
     background-color: #fff;
 }
@@ -78,11 +88,11 @@ header img {
 }
 
 /*Div lado direito*/
-.caixaPrincipal .imgMarioLuige{
+.container .imgMarioLuige{
     width: 35%;
 }
 
-.caixaPrincipal .caixaVideo {
+.container .caixaVideo {
     position: fixed;
     top: 0;
     z-index: -1;   
@@ -90,12 +100,12 @@ header img {
     height: 100%;
     overflow: hidden; 
 }
-.caixaPrincipal .caixaVideo video {
+.container .caixaVideo video {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
-.caixaPrincipal .caixaVideo .mascara{
+.container .caixaVideo .mascara{
     width: 100vw;
     height: 100vh;
     background: linear-gradient(109deg, rgba(10,12,16,0.99) 15%, rgba(10, 2, 16, 0.368) 50%, rgba(10,12,16,0.99) 85%);
@@ -103,28 +113,45 @@ header img {
     top: 0;
 }
 
-.FormularioFaleConosco {
+.container .marioNS {
+    width: 18rem;
+    padding: 3rem;
+}
+.container .luigiNS {
+    width: 18rem;
+    padding: 3rem;
+    text-align: justify;
+}
+.nossosServicos .container p {
+    color: #fff;
+    font-size: 1.3rem;
+    text-align: justify;
+}
+
+.formularioFaleConosco {
     background-color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    width: 20%;
-    height: 35%;
+    width: 200px;
+    height: 250px;
     position: fixed;
-    top: 10%;
-    left: -34%;
+    top: 20%;
+    left: -35%;
+    transform: translateX(-50%);
     padding: 1%;
     border-radius: 5%;
+    transition: 1s ease-in-out;
 }
-.FormularioFaleConosco input {
+.formularioFaleConosco input {
     border: 1px solid gray;
     background-color: #fff;
     padding: 2%;
     width: 100%;
     font-size: 90%;
 }
-.FormularioFaleConosco button {
+.formularioFaleConosco button {
     background-color: #c51111;
     color: #fff;
     width: 50%;
@@ -132,7 +159,7 @@ header img {
     margin-top: 5%;
     font-size: 90%;
 }
-.FormularioFaleConosco textarea{
+.formularioFaleConosco textarea{
     width: 100%;
     height: 50%;
     padding: 2%;
@@ -140,27 +167,42 @@ header img {
     font-size: 90%;
 }
 @media screen and (max-width: 450px) {
-    *{
-        
-        font-size: 83%;
+    * {
+        font-size: .7rem;
     }
-    .caixaPrincipal {
+    .container {
+        flex-direction: column;
+        justify-content: space-evenly;
         padding: 2rem;    
     }
-    .caixaPrincipal .imgMarioLuige{
-       width: 40%;
+    .container .sobreNos {
+        width: 65%;
+        color: #fff;
+        font-size: 80%;
+        text-align: justify;
     }
-    .caixaPrincipal .botaoEntreEmContato {
+ 
+    .container .imgMarioLuige{
+       width: 60%;
+    }
+    .container .botaoEntreEmContato {
         width: 45%;
         padding: 4% 2%;
-        margin-top: 5px;
+    }
+    .nossosServicos .container p {
+        font-size: 1rem;
+        text-align: justify;
+    }
+    .container .marioNS {
+        width: 10rem;
+        padding: 1rem;
+    }
+    .container .luigiNS {
+        width: 10rem;
+        padding: 1rem;
     }
     .linkZap img {
         height: 40px;
-    }
-    .FormularioFaleConosco {
-        width: 35%;
-        height: 20%;      
     }
     .FormularioFaleConosco button {
         background-color: #c51111;
@@ -174,29 +216,25 @@ header img {
 @media screen and (min-width: 451px )and (max-width: 1023px) {
     *{
         
-        font-size: 85%;
+        font-size: 100%;
     }
-    .caixaPrincipal {
+    .container {
         padding: 2rem;    
     }
-    .caixaPrincipal .sobreNos .logoMario {
+    .container .sobreNos .logoMario {
         width: 85%;
     }
-    .caixaPrincipal .imgMarioLuige{
+    .container .imgMarioLuige{
        width: 30%;
     }
-    .caixaPrincipal .botaoEntreEmContato {
+    .container .botaoEntreEmContato {
         width: 35%;
         padding: 3% 2%;
         margin-top: 10px;
     }
+    
     .linkZap img {
         height: 30px;
-    }
-    
-    .FormularioFaleConosco {
-        width: 35%;
-        height: 30%;      
     }
     .FormularioFaleConosco button {
         background-color: #c51111;

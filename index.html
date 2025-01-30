@@ -9,50 +9,78 @@
 </head>
 
 <body>
-    <div class="mascaraFormulario"></div>
+    <div onclick="mascaraOff()" class="mascaraFormulario"></div>
     <header>
-        <img src="./img/logo-header.png" alt="logo mario">
-        <a href="">Home</a>
-        <a href="">Nossos Servoços</a>
-        <a href="">Fale Conosco</a>
+        <a href="#" class="logoHeader"><img src="./img/logo-header.png" alt="logo mario"></a>
+        <a href="#">Home</a>
+        <a href="#nossosServicos">Nossos Servoços</a>
+        <a onclick="btnContato()">Fale Conosco</a>
     </header>
     <main>
-        <section class="caixaPrincipal">
+        <section class="container">
 
             <div class="sobreNos">
 
                 <img src="./img/logo.png" alt="logo do mario bros" class="logoMario">
-    
+
                 <p>Você já se encontrou em uma situação de emergência com encanamento? Vazamentos inesperados, canos
-                entupidos ou torneiras que não param de pingar? Não se preocupe, porque estamos aqui para salvar o dia!
-                Apresentamos a vocês os encanadores mais famosos do Reino dos Cogumelos - Mario e Luigi!</p>
-    
-                <button class="botaoEntreEmContato">
+                    entupidos ou torneiras que não param de pingar? Não se preocupe, porque estamos aqui para salvar o
+                    dia!
+                    Apresentamos a vocês os encanadores mais famosos do Reino dos Cogumelos - Mario e Luigi!</p>
+
+                <button onclick="btnContato()" class="botaoEntreEmContato">
                     Entre em Contato
                 </button>
-    
+
             </div>
-                
-    
+
+
             <div class="caixaVideo">
                 <video src="./img/video.mp4" autoplay muted loop></video>
                 <div class="mascara"></div>
             </div>
-            
+
             <img src="./img/mario.png" alt="imagem Mario e Luige" class="imgMarioLuige">
-            
+
+        </section>
+        <section class="nossosServicos" id="nossosServicos">
+            <div class="container">
+                <div>
+                    <img class="marioNS" src="./img/marioNS.png" alt="mario">
+                </div>
+                <div>
+                    <p>
+                        
+                        Nós os irmãos Mario e Luigi somos conhecidos não só por suas aventuras nos videogames, mas também como
+                        habilidosos encanadores. Nós podem oferecer uma variedade de serviços na casa de um cliente,
+                        incluindo a instalação e reparo de tubulações, desentupimento de ralos e pias, manutenção de
+                        sistemas hidráulicos e instalação de aparelhos como chuveiros e aquecedores de água. Além disso,
+                         realizamos inspeções detalhadas dos sistemas de encanamento para garantir que
+                        tudo esteja funcionando perfeitamente, identificando e solucionando problemas antes que eles se
+                        agravem. Com a dupla, os clientes podem ter certeza de que estão em boas mãos e que qualquer
+                        problema será resolvido com agilidade e eficiência. 🌟🚰👨‍🔧
+
+                        Se precisar de mais alguma coisa, estou por aqui!
+                    </p>
+                </div>
+                <div>
+                    <img class="luigiNS" src="./img/luigi.png" alt="luigi">
+                </div>
+            </div>
         </section>
     </main>
     <a href="https://wa.me/5521985544789?text=Quero%20falar%20com%20os%20irm%C3%A3os%20Mario." class="linkZap">
         <img src="./img/whatsapp.png" alt="">
     </a>
 
-    <form action="" class="FormularioFaleConosco">
+    <form class="formularioFaleConosco">
         <input type="text" placeholder="Seu nome">
         <input type="text" placeholder="Seu telefone">
         <textarea name="" id="" placeholder="Digite seu problema aqui..."></textarea>
-        <button>Pedir orçamento</button>
+        <button onclick="mascaraOff()">Pedir orçamento</button>
     </form>
+    
 </body>
+<script src="./scripts.js"></script>
 
 </html>
