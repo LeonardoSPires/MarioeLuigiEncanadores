@@ -7,6 +7,22 @@
 html {
     scroll-behavior: smooth;
   }
+.mascaraFormulario button {
+    position: fixed;
+    top: 15%;
+    right: 10%;
+    font-size: 1.1rem;
+    color: #c0bfbf;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-color: #37363656;
+    border-radius: 50%;
+    border: none;
+}
+.mascaraFormulario button:hover {
+    color: #fff;
+}
 .mascaraFormulario{
     visibility: hidden;
     position: fixed;
@@ -20,14 +36,14 @@ header {
     display: flex;
     align-items: center;
     position: fixed;
-    padding: 2%;
+    padding: 1% 2%;
     width: 100% ;
 }
 header a {
     display: flex;
     justify-content: center;
     text-decoration: none;
-    width: 15%;
+    width: 30%;
     color: #fff;
 }
 header a:hover {
@@ -36,7 +52,7 @@ header a:hover {
     transition: .5s ease-in-out;
 }
 header a img {
-    height: 4rem;
+    height: 3.5rem;
 }
 .logoHeader {
     width: max-content;
@@ -186,7 +202,10 @@ header a img {
 }
 @media screen and (max-width: 450px) {
     * {
-        font-size: .8rem;
+        font-size: .9rem;
+    }
+    header img {
+        height: 3rem;
     }
     .container {
         flex-direction: column;
